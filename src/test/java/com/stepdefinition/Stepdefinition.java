@@ -167,6 +167,10 @@ public class Stepdefinition {
 		year.click();
 		Select j=new Select(year);
 		j.selectByIndex(15);
+		WebElement mon = driver.findElement(By.xpath("//select[@id='cc_exp_month']"));
+		mon.click();
+		Select i=new Select(mon);
+		i.selectByIndex(7);
 	}
 
 	@When("^user Enter The Cvv Number In Cvv Number Field$")

@@ -6,7 +6,7 @@ When user Enter The Username In User Field
 And user Enter The Password In Paaword Field
 Then user Click The Login Button And It Navigates To Search Hotel Page
 
-
+@smokeTest
 Scenario: User Select The Hotel Type
 When User Select The Location
 And user Select The Hotels
@@ -18,7 +18,7 @@ And user Select The Adults Per Room
 And user Select The Children Per Room 
 Then user Click The Search Button And It Navigates To Next Page
 
-
+@sanityTest
 Scenario: User Select The Hotel 
 When user Select The Hotel Name
 Then user Click The Continue Button And And It Navigates To Next Page

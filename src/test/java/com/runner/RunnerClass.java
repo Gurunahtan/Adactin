@@ -5,20 +5,16 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src//test//java//com//feature",
-glue = "com.stepdefinition", 
-monochrome = true,
-dryRun = false,
-tags = "@smokeTest",
-plugin = {"html:Reports/Html_Report",
-		"pretty", 
-		"json:Reports/Json_Report.json",
-		})
+glue = "com.stepdefinition" 
+)
 
 public class RunnerClass {
 
@@ -26,8 +22,8 @@ public class RunnerClass {
 
 	@BeforeClass
 	public static void Broswer() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\ELCOT\\eclipse-workspace\\AaactinCucumber\\webdriver\\chromedriver.exe");
+		//WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\ELCOT\\eclipse-workspace\\AaactinCucumber\\webdriver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
